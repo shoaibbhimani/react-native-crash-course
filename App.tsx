@@ -3,6 +3,14 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, Button, FlatList } from "react-native";
 
 
+type listItemType = {
+  id: number;
+  title: string
+}
+
+
+
+
 export default function App() {
   const [list, setList] = useState([]);
 
@@ -18,7 +26,15 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-     
+      <FlatList
+        data={list}
+        keyExtractor={(listItem: listItemType) => {
+          return listItem.id.toString();
+        }}
+        renderItem={({ item }) => {
+          return <Text>{item.title}</Text>
+        }}
+      />
     </View>
   );
 }
