@@ -1,24 +1,11 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 
-import { ImagePickerComponent } from "./ImagePicker";
+import { NavigationProvider } from "./navigation"
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <ImagePickerComponent />
-    </View>
+    <NavigationProvider />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  buttonContainer: {
-    flexDirection: "row",
-  },
-});
