@@ -1,15 +1,12 @@
-import { StatusBar } from "expo-status-bar";
-import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, Button, FlatList, Image } from "react-native";
+import React from "react";
+import { StyleSheet, View } from "react-native";
 
-import { ImagePickerComponent } from "./ImagePicker"
+import { ImagePickerComponent } from "./ImagePicker";
 
 export default function App() {
- 
-
   return (
     <View style={styles.container}>
-        <ImagePickerComponent />
+      <ImagePickerComponent />
     </View>
   );
 }
